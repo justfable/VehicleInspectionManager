@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="VehicleInspectionInterface.AddNewCar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Mark -->
+        <Label Content="Марка" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="MarkTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <!-- Model -->
+        <Label Content="Модель" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="ModelTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <!-- Year -->
+        <Label Content="Год выпуска" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="YearTextBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <!-- Number -->
+        <Label Content="Номер" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="NumberTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <!-- Inspection Checkbox -->
+        <CheckBox x:Name="chkInspection" Content="Техосмотр пройден" Grid.Row="4" Grid.ColumnSpan="2" Margin="5"/>
+
+        <!-- Add Car Button -->
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Margin="5">
+            <Button Content="Добавить автомобиль" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" Click="AddCarButton_Click"/>
+
+            <Button Content="Назад" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" Click="BackButtonANC_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>
+
